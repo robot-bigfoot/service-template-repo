@@ -1,0 +1,11 @@
+[Unit]
+Description={desc}
+
+[Service]
+ExecStart=sh {path}/run.sh
+Restart=on-failure
+Type=notify
+KillSignal=SIGINT
+
+[Install]
+WantedBy=default.target
